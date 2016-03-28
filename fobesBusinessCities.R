@@ -39,3 +39,16 @@ choro1$ggplot_scale = scale_fill_gradientn(name = "# Cities",
 
 #Display Plot
 choro1$render()
+
+
+df_state_demographics$value <- df_state_demographics$cities/df_state_demographics$total_population
+
+#Create Plot
+choro2 <- StateChoropleth$new(df_state_demographics)
+choro2$title = "Forbes' Best Cities for Business (Per Capita) by State"
+choro2$set_num_colors(1)
+choro2$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro2$ggplot_scale = scale_fill_gradientn(name = "Cities per Capita", 
+                                           colours = brewer.pal(8, "Greens"))
+
+choro2$render()
