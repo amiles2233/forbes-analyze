@@ -1,7 +1,7 @@
 ##Forbes Best Cities for Business Mapping
 
 # Load Libraries
-library(forbesListR) #devtools::install_github("abresler/forebesListR")
+library(forbesListR) #devtools::install_github("abresler/forbesListR")
 library(dplyr)
 library(choroplethr)
 library(RColorBrewer)
